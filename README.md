@@ -36,8 +36,8 @@ Let ```$INPUT_DIR``` indicate a folder for a task dataset which contains ```trai
 python CTT/BioBERT_ft_cpl.py \
 --task=chemprot \
 --input_dir=$INPUT_DIR \
---init_checkpoint=$CONVERTED_BIOBERT_DIR/pytorch_model.bin \
---config_file=$CONVERTED_BIOBERT_DIR/config.json \
+--init_checkpoint=$CONVERTED_BIOBERT_DIR/biobert.pt \
+--config_file=$CONVERTED_BIOBERT_DIR/bert_config.json \
 --vocab_path=$CONVERTED_BIOBERT_DIR/vocab.txt \
 --do_train=True \
 --do_eval=True \

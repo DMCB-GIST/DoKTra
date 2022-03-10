@@ -10,7 +10,7 @@ By applying the DoKTra framework on biomedical, clinical, and financial domain d
 
 
 # Main experimental results on biomedical & clinical domains
-
+![2](https://user-images.githubusercontent.com/101086211/157597627-3427f2ed-72f2-4438-a3ba-43cd7d3e1e3c.jpg)
 
 # Main experimental results on financial domain
 

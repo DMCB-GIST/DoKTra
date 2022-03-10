@@ -6,6 +6,7 @@ In DoKTra, the domain knowledge from the existing in-domain pre-trained language
 By applying the DoKTra framework on biomedical, clinical, and financial domain downstream tasks, the student models generally retain a high percentage of teacher performance, and even outperform the teachers in certain tasks.
 
 # Workflow
+![1](https://user-images.githubusercontent.com/101086211/157597476-78c41eaa-8805-45bf-86e0-39d88c25868e.jpg)
 
 
 # Main experimental results on biomedical & clinical domains

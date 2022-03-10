@@ -5,23 +5,23 @@ In DoKTra, the domain knowledge from the existing in-domain pre-trained language
 
 By applying the DoKTra framework on biomedical, clinical, and financial domain downstream tasks, the student models generally retain a high percentage of teacher performance, and even outperform the teachers in certain tasks.
 
-# Workflow
+## Workflow
 ![1](https://user-images.githubusercontent.com/101086211/157597476-78c41eaa-8805-45bf-86e0-39d88c25868e.jpg)
 
-# Main experimental results on biomedical & clinical domains
+## Main experimental results on biomedical & clinical domains
 ![2](https://user-images.githubusercontent.com/101086211/157597627-3427f2ed-72f2-4438-a3ba-43cd7d3e1e3c.jpg)
 
-# Main experimental results on financial domain
+## Main experimental results on financial domain
 ![3](https://user-images.githubusercontent.com/101086211/157597647-e4a168ae-2ec9-485d-a60b-c9f5a5c3a9bf.jpg)
 
-# Requirements
+## Requirements
 ```
 Python==3.7
 Pytorch==1.8.1
 transformers==4.7.0
 ```
 
-# Execution examples
+## Execution examples
 ### Convert the original BioBERT Tensorflow checkpoint into PyTorch checkpoint
 Set ```$ORIGINAL_BIOBERT_CKPT_DIR``` as a folder which contains ```.ckpt``` file, ```bert_config.json``` file, and ```vocab.txt``` file from the original BioBERT repository
 ```
@@ -90,7 +90,7 @@ python ABD/BioMed_RoBERTa_DoKTra_cpl.py \
 --confidence_penalty_weight=0.5
 ```
 
-# Citation
+## Citation
 ```
 Will be added after publishing
 ```

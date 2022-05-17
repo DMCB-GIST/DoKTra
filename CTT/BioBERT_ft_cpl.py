@@ -443,7 +443,7 @@ if args.do_eval:
     if args.task != 'hoc':
         print("  Accuracy: {0:.4f}".format(eval_accuracy/nb_eval_steps))
     
-    results = biotask_eval(logits_all,[item[1] for item in dataset_dict[args.task]['dev']],args.task)
+    results = biotask_eval(logits_all,[item[1] for item in dataset_dict['dev']],args.task)
     
     if args.task != 'hoc':
         with open(os.path.join(args.output_dir,'eval_results_'+args.task+'.txt'),'w') as f_ev:
@@ -508,7 +508,7 @@ if args.do_predict:
     if args.task != 'hoc':
             print("  Accuracy: {0:.4f}".format(eval_accuracy/nb_eval_steps))
 
-    results = biotask_eval(logits_all,[item[1] for item in dataset_dict[args.task]['test']],args.task)
+    results = biotask_eval(logits_all,[item[1] for item in dataset_dict['test']],args.task)
 
     if args.task != 'hoc':
         with open(os.path.join(args.output_dir,'test_eval_results_'+args.task+'.txt'),'w') as f_ev:

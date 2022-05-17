@@ -127,22 +127,22 @@ label_list_dict = {'chemprot' : ["CPR:3", "CPR:4", "CPR:5", "CPR:6", "CPR:9", "f
                    'ddi':["DDI-mechanism", "DDI-effect", "DDI-advise", "DDI-int", "DDI-false"],
                    'i2b2':['PIP', 'TeCP', 'TeRP', 'TrAP', 'TrCP', 'TrIP', 'TrNAP', 'TrWP', 'false']}
 
-if args.task = 'chemprot':
+if args.task == 'chemprot':
     dataset_dict = dataset_dict_loader(args.input_dir,label_list_dict[args.task])
     config_teacher = transformers.BertConfig.from_pretrained(args.config_file_teacher, num_labels=len(label_list_dict[args.task]))
     config = transformers.RobertaConfig.from_pretrained(args.config_file, num_labels=len(label_list_dict[args.task]))
 
-if args.task = 'gad':
+if args.task == 'gad':
     dataset_dict = dataset_dict_loader(args.input_dir,label_list_dict[args.task],dev_header=True,tst_header=False)
     config_teacher = transformers.BertConfig.from_pretrained(args.config_file_teacher, num_labels=len(label_list_dict[args.task]))
     config = transformers.RobertaConfig.from_pretrained(args.config_file, num_labels=len(label_list_dict[args.task]))
 
-if args.task = 'ddi':
+if args.task == 'ddi':
     dataset_dict = dataset_dict_loader(args.input_dir,label_list_dict[args.task],trn_header=True,dev_header=True)
     config_teacher = transformers.BertConfig.from_pretrained(args.config_file_teacher, num_labels=len(label_list_dict[args.task]))
     config = transformers.RobertaConfig.from_pretrained(args.config_file, num_labels=len(label_list_dict[args.task]))
 
-if args.task = 'i2b2':
+if args.task == 'i2b2':
     dataset_dict = dataset_dict_loader(args.input_dir,label_list_dict[args.task],trn_header=True,dev_header=True)
     config_teacher = transformers.BertConfig.from_pretrained(args.config_file_teacher, num_labels=len(label_list_dict[args.task]))
     config = transformers.RobertaConfig.from_pretrained(args.config_file, num_labels=len(label_list_dict[args.task]))

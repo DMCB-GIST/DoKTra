@@ -633,7 +633,7 @@ if args.do_eval:
 
     intuitive_dev = intuitive_loss(output_all_T,output_all_S)
 
-    results = biotask_eval(logits_all,[item[1] for item in dataset_dict[args.task]['dev']],args.task)
+    results = biotask_eval(logits_all,[item[1] for item in dataset_dict['dev']],args.task)
     
     if args.task != 'hoc':
         with open(os.path.join(args.output_dir,'eval_results_'+args.task+'.txt'),'w') as f_ev:
@@ -732,7 +732,7 @@ if args.do_predict:
 
     intuitive_tst = intuitive_loss(output_all_T,output_all_S)
 
-    results = biotask_eval(logits_all,[item[1] for item in dataset_dict[args.task]['test']],args.task)
+    results = biotask_eval(logits_all,[item[1] for item in dataset_dict['test']],args.task)
 
     if args.task != 'hoc':
         with open(os.path.join(args.output_dir,'test_eval_results_'+args.task+'.txt'),'w') as f_ev:

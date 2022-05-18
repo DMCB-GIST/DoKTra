@@ -439,7 +439,7 @@ if args.do_train:
             # Load batch for teacher
             b_input_ids = batch[0].to(device).long()
             b_input_mask = batch[1].to(device).long()
-            b_labels = batch[2].to(device).long() if args.task != 'hoc' else batch[2].to(device).float()
+            b_labels = batch[4].to(device).long() if args.task != 'hoc' else batch[4].to(device).float()
 
             with torch.no_grad():
                 outputs = teacher_model(input_ids = b_input_ids,
@@ -576,7 +576,7 @@ if args.do_eval:
         # Add batch to GPU
         b_input_ids = batch[0].to(device).long()
         b_input_mask = batch[1].to(device).long()
-        b_labels = batch[2].to(device).long() if args.task != 'hoc' else batch[2].to(device).float()
+        b_labels = batch[4].to(device).long() if args.task != 'hoc' else batch[4].to(device).float()
 
         with torch.no_grad():
             outputs = teacher_model(input_ids = b_input_ids,
@@ -669,7 +669,7 @@ if args.do_predict:
 
         b_input_ids = batch[0].to(device).long()
         b_input_mask = batch[1].to(device).long()
-        b_labels = batch[2].to(device).long() if args.task != 'hoc' else batch[2].to(device).float()
+        b_labels = batch[4].to(device).long() if args.task != 'hoc' else batch[4].to(device).float()
 
         with torch.no_grad():
             outputs = teacher_model(input_ids = b_input_ids,

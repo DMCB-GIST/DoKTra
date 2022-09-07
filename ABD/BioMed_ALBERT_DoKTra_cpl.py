@@ -132,17 +132,17 @@ if args.task == 'chemprot':
     config_teacher = transformers.BertConfig.from_pretrained(args.config_file_teacher, num_labels=len(label_list_dict[args.task]))
     config = transformers.AlbertConfig.from_pretrained(args.config_file, num_labels=len(label_list_dict[args.task]))
 
-if args.task == 'gad':
+elif args.task == 'gad':
     dataset_dict = dataset_dict_loader(args.input_dir,label_list_dict[args.task],dev_header=True,tst_header=False)
     config_teacher = transformers.BertConfig.from_pretrained(args.config_file_teacher, num_labels=len(label_list_dict[args.task]))
     config = transformers.AlbertConfig.from_pretrained(args.config_file, num_labels=len(label_list_dict[args.task]))
 
-if args.task == 'ddi':
+elif args.task == 'ddi':
     dataset_dict = dataset_dict_loader(args.input_dir,label_list_dict[args.task],trn_header=True,dev_header=True)
     config_teacher = transformers.BertConfig.from_pretrained(args.config_file_teacher, num_labels=len(label_list_dict[args.task]))
     config = transformers.AlbertConfig.from_pretrained(args.config_file, num_labels=len(label_list_dict[args.task]))
 
-if args.task == 'i2b2':
+elif args.task == 'i2b2':
     dataset_dict = dataset_dict_loader(args.input_dir,label_list_dict[args.task],trn_header=True,dev_header=True)
     config_teacher = transformers.BertConfig.from_pretrained(args.config_file_teacher, num_labels=len(label_list_dict[args.task]))
     config = transformers.AlbertConfig.from_pretrained(args.config_file, num_labels=len(label_list_dict[args.task]))

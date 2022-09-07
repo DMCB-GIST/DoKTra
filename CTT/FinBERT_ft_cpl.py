@@ -114,7 +114,7 @@ if args.task == 'fpb':
     dataset_dict = dataset_dict_loader(args.input_dir,label_list_dict[args.task])
     config = transformers.BertConfig.from_pretrained(args.config_file, num_labels=3)
 
-if args.task == 'fts':
+elif args.task == 'fts':
     dataset_dict = dataset_dict_loader(args.input_dir,label_list_dict[args.task])
     config = transformers.BertConfig.from_pretrained(args.config_file, num_labels=3)
 

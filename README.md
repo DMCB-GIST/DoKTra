@@ -92,5 +92,11 @@ python ABD/BioMed_RoBERTa_DoKTra_cpl.py \
 
 ## Citation
 ```
-Will be added after publishing
+@inproceedings{choi2022domain,
+  title={Domain Knowledge Transferring for Pre-trained Language Model via Calibrated Activation Boundary Distillation},
+  author={Choi, Dongha and Choi, HongSeok and Lee, Hyunju},
+  booktitle={Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  pages={1658--1669},
+  year={2022}
+}
 ```

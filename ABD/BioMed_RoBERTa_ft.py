@@ -122,17 +122,17 @@ if args.task == 'chemprot':
     config = transformers.RobertaConfig.from_pretrained(args.config_file if args.config_file is not None else "roberta-large", 
                                                         num_labels=len(label_list_dict[args.task]))
 
-if args.task == 'gad':
+elif args.task == 'gad':
     dataset_dict = dataset_dict_loader(args.input_dir,label_list_dict[args.task],dev_header=True,tst_header=False)
     config = transformers.RobertaConfig.from_pretrained(args.config_file if args.config_file is not None else "roberta-large", 
                                                         num_labels=len(label_list_dict[args.task]))
 
-if args.task == 'ddi':
+elif args.task == 'ddi':
     dataset_dict = dataset_dict_loader(args.input_dir,label_list_dict[args.task],trn_header=True,dev_header=True)
     config = transformers.RobertaConfig.from_pretrained(args.config_file if args.config_file is not None else "roberta-large", 
                                                         num_labels=len(label_list_dict[args.task]))
 
-if args.task == 'i2b2':
+elif args.task == 'i2b2':
     dataset_dict = dataset_dict_loader(args.input_dir,label_list_dict[args.task],trn_header=True,dev_header=True)
     config = transformers.RobertaConfig.from_pretrained(args.config_file if args.config_file is not None else "roberta-large", 
                                                         num_labels=len(label_list_dict[args.task]))
